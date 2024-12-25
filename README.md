@@ -10,7 +10,7 @@
 - **PCOS Detection**: Accurately predicts the likelihood of PCOS using user-provided health data. Powered by **Gradient Boosting Classifier** for high precision.
 - **Preventive Guidelines**: Offers tailored preventive measures and lifestyle recommendations.
 - **Exercise and Diet Plans**: Personalized suggestions to alleviate PCOS symptoms and promote overall health.
-- **Chat Assistance**: Interactive chatbot powered by the open-source **Hugging Face Mistral Model**.
+- **Chat Assistance**: Interactive chatbot powered by the open-source Hugging Face Mistral Model.
 - **Gynecologist Recommendations**: Lists nearby gynecologists if PCOS is detected.
 
 ![Dashboard](https://github.com/Kalamatha-Eshwari/FeminaInsight/assets/139895843/99e9c9fb-469c-4a30-9047-010b94b03b3d)
