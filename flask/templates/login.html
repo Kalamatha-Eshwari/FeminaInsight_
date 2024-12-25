@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login page</title>
+    <link rel="stylesheet" href="static/loginstyle.css">
+</head>
+<body>
+
+<div class="container">
+    <div class="website-info">
+        <h2>FeminaInsight</h2>
+        <p>"Empowering women through health awareness."</p>
+    </div>
+    <div class="login-section">
+        <h2>Login form</h2>
+        <h2>Welcome to FeminaInsight</h2>
+        
+        <form action="/login" method="POST">
+            <div class="form-group">
+              <label for="email">Email:</label>
+                <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
+            </div>
+            <div class="form-group">
+              <label for="pwd">Password:</label>
+                <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="password">
+            </div>
+         
+            <button type="submit" class="btn btn-dark">Login</button>
+           
+            <a href="/register" class="btn btn-primary">Register</a>
+          
+        </form>
+    </div>
+</div>
+
+</body>
+</html>
+

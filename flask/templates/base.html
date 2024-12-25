@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PCOS Health Assistant</title>
+    <link href="{{ url_for('static', filename='basestyle.css') }}" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="chat-container">
+            <div class="chat-header">
+                <i class="fas fa-heartbeat"></i> PCOS Health Assistant
+            </div>
+            <div id="chat-box"></div>
+            <div class="typing-indicator">Assistant is typing...</div>
+            <div class="input-container">
+                <div class="input-wrapper">
+                    <input type="text" id="user-message" 
+                           placeholder="Ask about PCOS symptoms, treatments, or lifestyle changes..." 
+                           onkeypress="if(event.key === 'Enter') sendMessage()">
+                    <button id="send-message" onclick="sendMessage()">
+                        <i class="fas fa-paper-plane"></i> Send
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function sendMessage() {
+            const userMessage = document.getElementById('user-message').value.trim();
+            if (!userMessage) return;
+
+            addMessage('user-message', userMessage);
+            document.getElementById('user-message').value = '';
+            
+           
+            document.querySelector('.typing-indicator').style.display = 'block';
+
+            fetch('/get_response', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ message: userMessage })
+            })
+            .then(response => {
+                if (!response.ok) throw new Error('Network response was not ok');
+                return response.json();
+            })
+            .then(data => {
+                document.querySelector('.typing-indicator').style.display = 'none';
+                addMessage('bot-message', data.response);
+            })
+            .catch(error => {
+                document.querySelector('.typing-indicator').style.display = 'none';
+                addMessage('bot-message', 'Sorry, I encountered an error. Please try again.');
+                console.error('Error:', error);
+            });
+        }
+
+        function addMessage(className, text) {
+            const chatBox = document.getElementById('chat-box');
+            const messageContainer = document.createElement('div');
+            messageContainer.className = 'message-container';
+            
+            const messageDiv = document.createElement('div');
+            messageDiv.className = className;
+            messageDiv.textContent = text;
+            
+            messageContainer.appendChild(messageDiv);
+            chatBox.appendChild(messageContainer);
+            chatBox.scrollTop = chatBox.scrollHeight;
+        }
+    </script>
+</body>
+</html>

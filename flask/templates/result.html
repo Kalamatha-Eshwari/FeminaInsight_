@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PCOS Prediction Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='result_style.css') }}">
+</head>
+<body>
+     <div class="dashboard-link">
+        <a href="{{ url_for('dashboard') }}">Dashboard</a>
+    </div>
+    
+    <div class="background">
+        <div class="container">
+            <div class="content">
+                <div class="prediction">
+                    <h1>PCOS Prediction Result</h1>
+                    <p>The prediction is: {{ prediction }}</p>
+                </div>
+
+                {% if prediction == "Yes" %}
+                    <!-- Display input for dynamic Google Maps search -->
+                    <div class="gynecologist-link">
+                        <p>Enter your city to find gynecologists nearby:</p>
+                        <input type="text" id="location" placeholder="Enter city name">
+                        <button onclick="generateMapLink()">Search</button>
+                        <p id="map-link"></p>
+                    </div>
+                {% endif %}
+            </div>
+
+            <!-- Sidebar with picture -->
+            <div class="sidebar">
+                <img src="static/Images/rese.jpg" alt="PCOS Awareness">
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function generateMapLink() {
+            var location = document.getElementById('location').value;
+            if (location) {
+                var mapUrl = `https://www.google.com/maps/search/gynecologist+in+${encodeURIComponent(location)}`;
+                document.getElementById('map-link').innerHTML = `<a href="${mapUrl}" target="_blank">View Gynecologists in ${location}</a>`;
+            } else {
+                document.getElementById('map-link').innerHTML = 'Please enter a location.';
+            }
+        }
+    </script>
+</body>
+</html>

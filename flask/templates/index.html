@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PCOS Detection</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='indexstyle.css') }}">
+</head>
+<body>
+    <div class="dashboard-link">
+        <a href="{{ url_for('dashboard') }}">Dashboard</a>
+    </div>
+    
+    <div class="container">
+        <h1>PCOS Detection</h1>
+        <p>"Empowering women through health awareness."</p>
+        <div class="image-container">
+            <!-- Space for a picture -->
+        </div>
+        <h2>Check Your Status</h2>
+        <p>Take control of your health by checking your PCOS status. Enter your details below to get started:</p>
+        
+        <form action="/predict" method="post">
+            <div class="form-row">
+                <div class="form-column">
+                    <label for="age">Age:</label>
+                    <input type="number" name="Age (yrs)" id="age" required>
+                    
+                    <label for="weight">Weight (Kg):</label>
+                    <input type="number" name="Weight (Kg)" id="weight" required>
+                    
+                    <label for="height">Height (Cm):</label>
+                    <input type="number" name="Height(Cm)" id="height" required>
+                    
+                    <label for="bmi">BMI:</label>
+                    <input type="number" name="BMI" id="bmi" required>
+                    
+                    <label for="blood_group">Blood Group:</label>
+                    <input type="number" name="Blood Group" id="blood_group" required>
+                    
+                    <label for="pulse_rate">Pulse Rate (bpm):</label>
+                    <input type="number" name="Pulse rate(bpm)" id="pulse_rate" required>
+                    
+                    <label for="rr">Respiration Rate (breaths/min):</label>
+                    <input type="number" name="RR (breaths/min)" id="rr" required>
+                    
+                    <label for="hb">Hemoglobin (g/dl):</label>
+                    <input type="number" name="Hb(g/dl)" id="hb" required>
+                    
+                    <label for="cycle_r_i">Cycle (R/I):</label>
+                    <select name="Cycle(R/I)" id="cycle_r_i" required>
+                        <option value="1">Regular</option>
+                        <option value="2">Irregular</option>
+                    </select>
+                    
+                    <label for="cycle_length">Cycle Length (days):</label>
+                    <input type="number" name="Cycle length(days)" id="cycle_length" required>
+                    
+                    <label for="pregnant">Pregnant (Y/N):</label>
+                    <select name="Pregnant(Y/N)" id="pregnant" required>
+                        <option value="1">Yes</option>
+                        <option value="0">No</option>
+                    </select>
+                    
+                    <label for="abortions">Number of Abortions:</label>
+                    <input type="number" name="No. of abortions" id="abortions" required>
+
+                    
+                    <label for="hip">Hip (inch):</label>
+                    <input type="number" name="Hip(inch)" id="hip" required>
+
+                    <label for="waist">Waist (inch):</label>
+                    <input type="number" name="Waist(inch)" id="waist" required>
+                </div>
+                
+                <div class="form-column">        
+                    <label for="rbs">Random Blood Sugar (mg/dl):</label>
+                    <input type="number" name="RBS(mg/dl)" id="rbs" required>
+                    
+                    <label for="weight_gain">Weight Gain (Y/N):</label>
+                    <select name="Weight gain(Y/N)" id="weight_gain" required>
+                        <option value="1">Yes</option>
+                        <option value="0">No</option>
+                    </select>
+                    
+                    <label for="hair_growth">Hair Growth (Y/N):</label>
+                    <select name="hair growth(Y/N)" id="hair_growth" required>
+                        <option value="1">Yes</option>
+                        <option value="0">No</option>
+                    </select>
+                    
+                    <label for="skin_darkening">Skin Darkening (Y/N):</label>
+                    <select name="Skin darkening (Y/N)" id="skin_darkening" required>
+                        <option value="1">Yes</option>
+                        <option value="0">No</option>
+                    </select>
+                    
+                    <label for="hair_loss">Hair Loss (Y/N):</label>
+                    <select name="Hair loss(Y/N)" id="hair_loss" required>
+                        <option value="1">Yes</option>
+                        <option value="0">No</option>
+                    </select>
+                    
+                    <label for="pimples">Pimples (Y/N):</label>
+                    <select name="Pimples(Y/N)" id="pimples" required>
+                        <option value="1">Yes</option>
+                        <option value="0">No</option>
+                    </select>
+                    
+                    <label for="reg_exercise">Regular Exercise (Y/N):</label>
+                    <select name="Reg.Exercise(Y/N)" id="reg_exercise" required>
+                        <option value="1">Yes</option>
+                        <option value="0">No</option>
+                    </select>
+
+                    <label for="bp_systolic">Blood Pressure Systolic (mmHg):</label>
+                    <input type="number" name="BP _Systolic (mmHg)" id="bp_systolic" required>
+                    
+                    <label for="bp_diastolic">Blood Pressure Diastolic (mmHg):</label>
+                    <input type="number" name="BP _Diastolic (mmHg)" id="bp_diastolic" required>
+                    
+                    <label for="follicle_no_l">Follicle Number Left:</label>
+                    <input type="number" name="Follicle No. (L)" id="follicle_no_l" required>
+                    
+                    <label for="follicle_no_r">Follicle Number Right:</label>
+                    <input type="number" name="Follicle No. (R)" id="follicle_no_r" required>
+                    
+                    <label for="avg_f_size_l">Average Follicle Size Left (mm):</label>
+                    <input type="number" name="Avg. F size (L) (mm)" id="avg_f_size_l" required>
+                    
+                    <label for="avg_f_size_r">Average Follicle Size Right (mm):</label>
+                    <input type="number" name="Avg. F size (R) (mm)" id="avg_f_size_r" required>
+                    
+                    <label for="endometrium">Endometrium (mm):</label>
+                    <input type="number" name="Endometrium (mm)" id="endometrium" required>
+                </div>
+            </div>
+            
+            <input type="submit" value="Predict">
+        </form>
+    </div>
+</body>
+</html>
+

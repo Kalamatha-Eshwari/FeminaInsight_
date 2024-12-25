@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>User Dashboard</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="static/dashboardstyle.css">
+</head>
+<body>
+
+<div class="container">
+  <header>
+    <h1>FeminaInsight</h1>
+    <div class="user-info">
+      <img src="static/Images/WhatsApp.jpg" alt="User Avatar">
+      <div class="user-details">
+        <p><b> name:</b> {{user.name}}</p>
+        <p><b> Email:</b> {{user.email}}</p>
+      </div>
+    </div>
+    <a href="logout" class="btn btn-dark">Logout</a>
+  </header>
+
+  <div class="dashboard">
+    <div class="box" style="background-image: url('static/Images/pco.jpg');">
+        <a href="{{ url_for('index') }}">
+        <p>Detect PCOS</p>
+      </a>
+    </div>
+    <div class="box" style="background-image: url('static/Images/prev.jpg');">
+        <a href="{{ url_for('prevention') }}">
+        <p>Prevention</p>
+      </a>
+    </div>
+    <div class="box" style="background-image: url('static/Images/pre.jpg');">
+        <a href="{{ url_for('exercise') }}">
+        <p>Exercise</p>
+      </a>
+    </div>
+    <div class="box" style="background-image: url('static/Images/diet.jpg');">
+        <a href="{{ url_for('diet') }}">
+        <p>Diet Plan</p>
+      </a>
+    </div>
+    <div class="box" style="background-image: url('static/Images/chat.jpg');">
+        <a href="{{ url_for('base') }}">
+        <p>Chat Assistant</p>
+      </a>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

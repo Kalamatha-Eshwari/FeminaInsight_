@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Register page</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+  <style>
+    body {
+      background-color: #94FFD8; /* Set a light background color */
+      font-family: Arial, sans-serif;
+    }
+    .container {
+      margin-top: 50px;
+    }
+    .card {
+      border: none;
+      border-radius: 20px;
+      box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.1); /* Add a subtle shadow */
+    }
+    .card-header {
+      background-color: #1E0342; /* Dark background color for the card header */
+      color: #fff; /* White text color */
+      border-bottom: none;
+      border-top-left-radius: 20px;
+      border-top-right-radius: 20px;
+    }
+    .card-body {
+      padding: 40px;
+    }
+    .form-group {
+      margin-bottom: 20px;
+    }
+    .btn-dark, .btn-primary {
+      border-radius: 20px;
+      padding: 12px 20px; /* Increase padding for larger buttons */
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-header">
+                    <h2 class="text-center">Register</h2>
+                </div>
+                <div class="card-body">
+                    <form action="/register" method="POST">
+                        <div class="form-group">
+                            <label for="name">Name:</label>
+                            <input type="text" class="form-control" id="name" placeholder="Enter name" name="name">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email:</label>
+                            <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
+                        </div>
+                        <div class="form-group">
+                            <label for="pwd">Password:</label>
+                            <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="password">
+                        </div>
+                        <button type="submit" class="btn btn-dark btn-block">Submit</button>
+                        <a href="/login" class="btn btn-primary btn-block">Login</a>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Diet plan</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='app.css') }}">
+</head>
+<body>
+  <header class="header">
+    <a class="t-brand brand" href="{{ url_for('dashboard') }}">FeminaInsight</a>
+    <div class="header__center">
+      <button class="button-icon">
+        <svg class="button-icon__icon" width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" role="presentation">
+          <path d="M15.707 15l5.657 5.657-.707.707L15 15.707l.707-.707z"/>
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M10 17a7 7 0 1 0 0-14 7 7 0 0 0 0 14zm0 1a8 8 0 1 0 0-16 8 8 0 0 0 0 16z"/>
+        </svg>
+        <form class="search" action="">
+          <label class="screen-reader-only" for="globalSearch">Search the Nutrition website</label>
+          <input class="t-body search__input" type="search" id="globalSearch" placeholder="Avocados, turmeric, kale, etc.">
+          <button class="button-icon search__submit" type="submit">
+            <span class="screen-reader-only">Search</span>
+          </button>
+          <button class="button-icon search__close" type="button">
+            <span class="screen-reader-only">Close the search form</span>
+            <svg class="button-icon__icon search__close__icon" width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" role="presentation">
+              <path d="M12 10.222L5.778 4 4 5.778 10.222 12 4 18.222 5.778 20 12 13.778 18.222 20 20 18.222 13.778 12 20 5.778 18.222 4 12 10.222z"/>
+            </svg>
+          </button>
+        </form>
+        
+      </form>
+      <nav class="center-nav" aria-label="Top navigation links">
+        <ul class="center-nav__items">
+          <li class="center-nav__item">
+            <a class="t-link" href="{{ url_for('diet') }}">Diet Plan</a>
+
+          </li>
+          <li class="center-nav__item">
+            <a class="t-link" href="{{ url_for('exercise') }}">Exercise</a>
+          </li>
+          <li class="center-nav__item">
+            <a class="t-link" href="{{ url_for('prevention') }}">prevention</a>
+          </li>
+          <li class="center-nav__item">
+            <a class="t-link" href="{{ url_for('base') }}">Chat Assistant</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <button class="button-icon menu-trigger">
+      <a href="{{ url_for('dashboard') }}" class="menu-link">
+        <span class="t-copy-large">Menu</span>
+    </a>
+      <svg class="button-icon__icon menu-trigger__icon--small" width="24" height="20" viewBox="0 0 24 20" xmlns="http://www.w3.org/2000/svg" role="presentation">
+        <path d="M8 18h16v2H8zM0 0h16v2H0z"/>
+      </svg>
+      <svg class="button-icon__icon menu-trigger__icon--large" width="52" height="24" viewBox="0 0 52 24" xmlns="http://www.w3.org/2000/svg" role="presentation">
+        <path d="M16 20h36v2H16zM0 2h36v2H0z"/>
+      </svg>
+    </button>
+    <nav class="menu" aria-label="Global menu">
+      <button class="button-icon menu__close">
+        <svg class="button-icon__icon menu__close__icon" width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" role="presentation">
+          <path d="M12 10.222L5.778 4 4 5.778 10.222 12 4 18.222 5.778 20 12 13.778 18.222 20 20 18.222 13.778 12 20 5.778 18.222 4 12 10.222z"/>
+        </svg>
+        <span class="screen-reader-only">Close </span>
+        <span class="t-copy-large">Menu</span>
+      </button>
+    </nav>
+    <button class="menu__overlay" aria-hidden="true">
+      <span class="screen-reader-only">Close menu</span>
+    </button>
+  </header>
+  <main class="main" id="mainContent">
+    
+    <article class="article">
+      <h1 class="t-display article__heading">Diet plan👩🏻‍⚕️🥗</h1>
+      <div class="article__content">
+        <h2 class="t-copy-large article__section-heading">PCOS: Why Diet Matters</h2>
+        <p class="t-body article__body">
+            “Not everyone with polycystic ovary disease has these complications, but for those who do, reaching and maintaining a healthy weight is our first concern,” Stathos says, “and that starts with diet and exercise.”
+        </p>
+        <h2 class="t-copy-large article__section-heading">Foods to Avoid with PCOS</h2>
+        <p class="t-body article__body">
+            People with PCOS should avoid these foods that can ramp up inflammation:
+            <li>Fried foods (French fries, potato chips, corn chips and fried chicken or fish)</li>
+            <li>Saturated fats such as butter or margarine</li>
+            <li>Red meat, including hamburgers, roast beef and steaks, processed luncheon meat and hot dogs</li>
+            <li>Processed snacks: cakes, cookies, candy and pies</li>
+            <li>Prepared cereal high in sugar, including instant oatmeal, granola</li>
+            <li>Sugary beverages such as sodas, teas and sports drinks</li>
+            <li>Alcoholic beverages</li>
+            <li>Refined flour, white bread, rolls, pizza crust and pasta</li>
+            <li>White rice</li>
+        </p>
+        <h2 class="t-copy-large article__section-heading">Best Foods for PCOS</h2>
+        <p class="t-body article__body">
+            <li>Omega-3 rich fish, such as salmon, baked or broiled</li>
+            <li>Olive oil instead of butter or margarine</li>
+            <li>Beans and other protein-rich legumes instead of meat</li>
+            <li>Non-starchy vegetables such as leafy greens (spinach, kale, escarole, endive, lettuce, etc.), tomatoes, mushrooms, peppers, broccoli, cauliflower, snow peas, celery and fennel</li>
+            <li>Whole grains, such as brown rice, barley, sorghum and others. Breads and pastas made with whole grains can help people with PCOS avoid spikes in blood sugar.</li>
+            <li>Whole fruit for dessert. The fiber content in whole fruit helps you feel full, helps your digestion and slows down the absorption of its sugars into the bloodstream.</li>
+        </p>
+        <h2 class="t-copy-large article__section-heading">Drink plenty of water and low- or no sugar beverages</h2>
+        <p class="t-body article__body">
+            Staying hydrated is essential: Drink plenty of water, unsweetened coffee or tea. Instead of soda, try seltzer with a splash of fruit juice.
+        </p>
+        <h2 class="t-copy-large article__section-heading">Fad Diets for PCOS? Not So Fast</h2>
+        <p class="t-body article__body">
+            Losing weight is essential to controlling insulin resistance but following diet trends may not be the best approach. Any plan based on eliminating whole food groups, such as carbohydrates, is not practical for long-term weight control.
+        </p>
+      
+        <section class="socials article__share" aria-labelledby="articleShare">
+          <h3 class="t-copy-large social__cta" id="articleShare">Share<span class="screen-reader-only"> this article</span></h3>
+          <a class="button-icon social" href="https://facebook.com">
+            <span class="screen-reader-only">Share on Facebook</span>
+            <svg class="button-icon__icon" width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" role="presentation">
+              <path d="M10.397 20v-7.156H8V10h2.397V7.76c0-2.435 1.487-3.76 3.66-3.76 1.04 0 1.934.078 2.193.112v2.544h-1.506c-1.181 0-1.41.563-1.41 1.385V10H16l-.366 2.844h-2.3V20"/>
+            </svg>
+          </a>
+          <a class="button-icon social" href="https://twitter.com">
+            <span class="screen-reader-only">Share on Twitter</span>
+            <svg class="button-icon__icon" width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" role="presentation">
+              <path d="M18.355 9.239c.01.142.01.284.01.426 0 4.335-3.299 9.33-9.33 9.33A9.267 9.267 0 0 1 4 17.523c.264.03.518.04.792.04a6.568 6.568 0 0 0 4.071-1.4 3.285 3.285 0 0 1-3.066-2.275c.203.03.406.051.62.051.294 0 .588-.04.862-.112a3.28 3.28 0 0 1-2.63-3.218v-.04c.437.243.945.395 1.483.416A3.277 3.277 0 0 1 4.67 8.254c0-.61.162-1.168.447-1.655a9.321 9.321 0 0 0 6.761 3.431 3.7 3.7 0 0 1-.081-.75A3.278 3.278 0 0 1 15.077 6c.943 0 1.796.396 2.395 1.036a6.456 6.456 0 0 0 2.081-.792 3.27 3.27 0 0 1-1.441 1.807c.66-.071 1.3-.254 1.888-.508a7.048 7.048 0 0 1-1.645 1.696z"/>
+            </svg>
+          </a>
+        </section>
+      </div>
+    </article>
+    <div class="diet-plan">
+      <h2 class="diet-plan__title">Your Diet Plan</h2>
+    
+      <div class="diet-plan__calendar">
+        <!-- Calendar and Time Slots -->
+        <div class="calendar">
+          <!-- Calendar functionality can be implemented here -->
+        </div>
+    
+        <!-- Time Slots for Breakfast, Lunch, Dinner -->
+        <div class="time-slots">
+          <div class="time-slot" id="breakfastSlot">
+            <h3 class="time-slot__title">Breakfast</h3>
+            <ul id="breakfastTasks" class="task-list">
+              <!-- Tasks for Breakfast will be dynamically added here -->
+            </ul>
+          </div>
+          <div class="time-slot" id="lunchSlot">
+            <h3 class="time-slot__title">Lunch</h3>
+            <ul id="lunchTasks" class="task-list">
+              <!-- Tasks for Lunch will be dynamically added here -->
+            </ul>
+          </div>
+          <div class="time-slot" id="dinnerSlot">
+            <h3 class="time-slot__title">Dinner</h3>
+            <ul id="dinnerTasks" class="task-list">
+              <!-- Tasks for Dinner will be dynamically added here -->
+            </ul>
+          </div>
+        </div>
+      </div>
+    
+      <!-- Form to Add New Tasks -->
+      <form id="todoForm" class="todo-form">
+        <input type="text" id="todoInput" class="todo-input" placeholder="Enter task description">
+        <input type="datetime-local" id="taskDateTime" class="task-datetime">
+        <select id="taskSlot" class="task-slot">
+          <option value="breakfast">Breakfast</option>
+          <option value="lunch">Lunch</option>
+          <option value="dinner">Dinner</option>
+        </select>
+        <button type="submit" class="button-icon todo-button">
+          <svg class="button-icon__icon" width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" role="presentation">
+            <path d="M19 13H13V19H11V13H5V11H11V5H13V11H19V13Z"/>
+          </svg>
+        </button>
+      </form>
+    
+      <!-- Task List Display -->
+      <div class="task-lists">
+        <ul id="allTasks" class="task-list">
+          <!-- All tasks will be dynamically added here -->
+        </ul>
+      </div>
+    </div>
+    
+  </main>
+  <script src="static/script.js"></script>
+</body>
+</html>

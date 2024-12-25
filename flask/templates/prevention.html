@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Understand PCOS</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='app.css') }}">
+
+</head>
+<body>
+  <header class="header">
+    <a class="t-brand brand" href="{{ url_for('dashboard') }}">FeminaInsight</a>
+    <div class="header__center">
+      <button class="button-icon">
+        <svg class="button-icon__icon" width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" role="presentation">
+          <path d="M15.707 15l5.657 5.657-.707.707L15 15.707l.707-.707z"/>
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M10 17a7 7 0 1 0 0-14 7 7 0 0 0 0 14zm0 1a8 8 0 1 0 0-16 8 8 0 0 0 0 16z"/>
+        </svg>
+        <form class="search" action="">
+          <label class="screen-reader-only" for="globalSearch">Search the Nutrition website</label>
+          <input class="t-body search__input" type="search" id="globalSearch" placeholder="Avocados, turmeric, kale, etc.">
+          <button class="button-icon search__submit" type="submit">
+            <span class="screen-reader-only">Search</span>
+          </button>
+          <button class="button-icon search__close" type="button">
+            <span class="screen-reader-only">Close the search form</span>
+            <svg class="button-icon__icon search__close__icon" width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" role="presentation">
+              <path d="M12 10.222L5.778 4 4 5.778 10.222 12 4 18.222 5.778 20 12 13.778 18.222 20 20 18.222 13.778 12 20 5.778 18.222 4 12 10.222z"/>
+            </svg>
+          </button>
+        </form>
+        
+      </form>
+      <nav class="center-nav" aria-label="Top navigation links">
+        <ul class="center-nav__items">
+          <li class="center-nav__item">
+            <a class="t-link" href="{{ url_for('diet') }}">Diet Plan</a>
+
+          </li>
+          <li class="center-nav__item">
+            <a class="t-link" href="{{ url_for('exercise') }}">Exercise</a>
+          </li>
+          <li class="center-nav__item">
+            <a class="t-link" href="{{ url_for('prevention') }}">prevention</a>
+          </li>
+          <li class="center-nav__item">
+            <a class="t-link" href="{{ url_for('base') }}">Chat Assistant</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <button class="button-icon menu-trigger">
+      <a href="{{ url_for('dashboard') }}" class="menu-link">
+        <span class="t-copy-large">Menu</span>
+    </a>
+      <svg class="button-icon__icon menu-trigger__icon--small" width="24" height="20" viewBox="0 0 24 20" xmlns="http://www.w3.org/2000/svg" role="presentation">
+        <path d="M8 18h16v2H8zM0 0h16v2H0z"/>
+      </svg>
+      <svg class="button-icon__icon menu-trigger__icon--large" width="52" height="24" viewBox="0 0 52 24" xmlns="http://www.w3.org/2000/svg" role="presentation">
+        <path d="M16 20h36v2H16zM0 2h36v2H0z"/>
+      </svg>
+    </button>
+    <nav class="menu" aria-label="Global menu">
+      <button class="button-icon menu__close">
+        <svg class="button-icon__icon menu__close__icon" width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" role="presentation">
+          <path d="M12 10.222L5.778 4 4 5.778 10.222 12 4 18.222 5.778 20 12 13.778 18.222 20 20 18.222 13.778 12 20 5.778 18.222 4 12 10.222z"/>
+        </svg>
+        <span class="screen-reader-only">Close </span>
+        <span class="t-copy-large">Menu</span>
+      </button>
+    </nav>
+    <button class="menu__overlay" aria-hidden="true">
+      <span class="screen-reader-only">Close menu</span>
+    </button>
+  </header>
+  <main class="main" id="mainContent">
+    <article class="article">
+      <h1 class="t-display article__heading">Understand PCOS🌸</h1>
+      <div class="article__content">
+        <h2 class="t-copy-large article__section-heading">What's PCOS</h2>
+        <p class="t-body article__body">
+          Polycystic Ovary Syndrome (PCOS) is a hormonal condition that affects many women worldwide. It's characterized by irregular periods, elevated androgen levels, and small cysts on the ovaries. Despite its challenges, managing PCOS is entirely possible with the right support and strategies.
+        </p>
+        <h2 class="t-copy-large article__section-heading">Journeying Through PCOS</h2>
+        <p class="t-body article__body">
+          Having PCOS, or Polycystic Ovary Syndrome, is actually quite common among women. It's like being part of a club where your hormones sometimes have a mind of their own! Sure, it might bring along some irregular periods, a bit of extra androgen action, and maybe even a few tiny cysts on the ovaries. But here's the thing: it's totally okay. You're still amazing just the way you are! Symptoms like acne, weight fluctuations, or extra hair growth? They're just little reminders that your body is unique, and that's something to celebrate. Plus, with the right support and management strategies, like making some lifestyle tweaks or taking medication if needed, you can navigate through any challenges like a pro. So take a deep breath, beautiful! You've got this, and you're not alone on this journey. 💪🌼
+        </p>
+        <h2 class="t-copy-large article__section-heading">So, How to manage this?</h2>
+        <p class="t-body article__body">
+          <li>Lifestyle Changes: Focus on a healthy diet rich in fruits, vegetables, whole grains, and lean proteins. Regular exercise can also help manage weight and improve insulin sensitivity, which is often affected in PCOS.</li>
+          <li>Medication: Your doctor may prescribe medications to regulate your menstrual cycle, reduce androgen levels, or help with insulin resistance. Birth control pills, anti-androgen medications, and metformin are commonly used.</li>
+          <ul>Remember, managing PCOS is a journey, and it may require patience and perseverance. But with the right approach and support from your healthcare team, you can effectively manage the condition and lead a fulfilling life.</ul>
+        </p>
+      </div>
+      <div class="article__image article__image--first">
+        <img src="https://img.freepik.com/free-vector/girl-power-reproductive-system-concept_23-2148658188.jpg" alt="First Image" width="300" height="200">
+    </div>
+    
+    <div class="article__image article__image--second">
+        <img src="https://static.vecteezy.com/system/resources/previews/025/441/222/non_2x/tiny-girls-with-monthly-calendar-on-laptop-screen-menstrual-cup-tampon-and-tablets-menstruation-period-menstrual-protection-and-feminine-hygiene-modern-flat-cartoon-style-illustration-vector.jpg" alt="Second Image" width="300" height="200">
+    </div>
+    
+      
+        <section class="socials article__share" aria-labelledby="articleShare">
+          <h3 class="t-copy-large social__cta" id="articleShare">Share<span class="screen-reader-only"> this article</span></h3>
+          <a class="button-icon social" href="https://facebook.com">
+            <span class="screen-reader-only">Share on Facebook</span>
+            <svg class="button-icon__icon" width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" role="presentation">
+              <path d="M10.397 20v-7.156H8V10h2.397V7.76c0-2.435 1.487-3.76 3.66-3.76 1.04 0 1.934.078 2.193.112v2.544h-1.506c-1.181 0-1.41.563-1.41 1.385V10H16l-.366 2.844h-2.3V20"/>
+            </svg>
+          </a>
+          <a class="button-icon social" href="https://twitter.com">
+            <span class="screen-reader-only">Share on Twitter</span>
+            <svg class="button-icon__icon" width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" role="presentation">
+              <path d="M18.355 9.239c.01.142.01.284.01.426 0 4.335-3.299 9.33-9.33 9.33A9.267 9.267 0 0 1 4 17.523c.264.03.518.04.792.04a6.568 6.568 0 0 0 4.071-1.4 3.285 3.285 0 0 1-3.066-2.275c.203.03.406.051.62.051.294 0 .588-.04.862-.112a3.28 3.28 0 0 1-2.63-3.218v-.04c.437.243.945.395 1.483.416A3.277 3.277 0 0 1 4.67 8.254c0-.61.162-1.168.447-1.655a9.321 9.321 0 0 0 6.761 3.431 3.7 3.7 0 0 1-.081-.75A3.278 3.278 0 0 1 15.077 6c.943 0 1.796.396 2.395 1.036a6.456 6.456 0 0 0 2.081-.792 3.27 3.27 0 0 1-1.441 1.807c.66-.071 1.3-.254 1.888-.508a7.048 7.048 0 0 1-1.645 1.696z"/>
+            </svg>
+          </a>
+        </section>
+      </div>
+    </article>
+    <aside class="aside">
+      <section class="related-articles" aria-labelledby="relatedArticles">
+        <h2 class="screen-reader-only" id="relatedArticles">Related Articles</h2>
+        <a class="t-title card card--featured" href="https://www.pennmedicine.org/updates/blogs/fertility-blog/2020/march/five-myths-about-pcos">
+          <span class="card__title">Myths about PCOS</span>
+          <div class="card__arrow card__arrow--small">
+            <svg class="card__icon" width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" role="presentation">
+              <path d="M11.6 7.657L5.943 2 5 2.943l4.714 4.714L5 12.37l.943.943L11.6 7.657z"/>
+            </svg>
+          </div>
+          <div class="card__arrow card__arrow--large">
+            <svg class="card__icon" width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" role="presentation">
+              <path d="M17.9 12.485L9.414 4 8 5.414l7.071 7.071L8 19.556l1.414 1.415 7.071-7.072 1.415-1.414z"/>
+            </svg>
+          </div>
+        </a>
+        <a class="t-title card" href="https://weconceive.com/library/fertility-diagnoses/living-with-pcos-real-stories-from-women-finding-hope-in-the-diagnosis">
+          <span class="card__title">Women's personal experiences</span>
+          <div class="card__arrow card__arrow--small">
+            <svg class="card__icon" width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" role="presentation">
+              <path d="M11.6 7.657L5.943 2 5 2.943l4.714 4.714L5 12.37l.943.943L11.6 7.657z"/>
+            </svg>
+          </div>
+          <div class="card__arrow card__arrow--large">
+            <svg class="card__icon" width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" role="presentation">
+              <path d="M17.9 12.485L9.414 4 8 5.414l7.071 7.071L8 19.556l1.414 1.415 7.071-7.072 1.415-1.414z"/>
+            </svg>
+          </div>
+        </a>
+    <aside>
+      </section>
+      <section class="section-selector" aria-labelledby="sectionSelector">
+        <h2 class="screen-reader-only" id="sectionSelector">Choose article section</h2>
+        <p class="section-selector__section-number">
+          <span class="screen-reader-only">You are viewing section </span><span class="t-section-number">03</span><span class="screen-reader-only">of 20.</span>
+        </p>
+        <button class="button-icon section-selector__previous">
+          <span class="screen-reader-only">Go to the previous section</span>
+          <svg class="button-icon__icon section-selector__icon--mobile" width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg" role="presentation">
+            <path d="M13.829 20.314l9.899 9.9-1.414 1.413L11 20.314 22.314 9l1.414 1.414-9.9 9.9z"/>
+          </svg>
+          <svg class="button-icon__icon section-selector__icon--desktop" width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg" role="presentation">
+            <path d="M30.213 26.728L18.9 15.414 20.314 14l11.313 11.314-1.414 1.414z"/>
+            <path d="M9 25.314L20.314 14l1.414 1.414-11.314 11.314L9 25.314z"/>
+          </svg>
+        </button>
+
+          </svg>
+        </button>
+      </section>
+    </aside>
+  </main>
+</body>
+</html>

@@ -1,0 +1,93 @@
+body, html {
+    height: 100%;
+    margin: 0;
+}
+
+.background {
+    background-image: url('Images/res.jpg'); /* Set background image */
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.content {
+    max-width: 600px;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background color for content */
+    border-radius: 10px;
+    text-align: center;
+}
+
+.prediction {
+    margin-bottom: 20px;
+}
+
+.gynecologist-link {
+    margin-top: 20px;
+}
+
+.gynecologist-link input {
+    padding: 10px;
+    width: calc(100% - 20px);
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.gynecologist-link button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.gynecologist-link button:hover {
+    background-color: #0056b3;
+}
+
+.gynecologist-link p {
+    margin: 10px 0;
+}
+
+.prevention-link {
+    margin-top: 20px;
+}
+
+.prevention-link a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.prevention-link a:hover {
+    text-decoration: underline;
+}
+
+.sidebar img {
+    max-width: 200px;
+    border-radius: 10px;
+}
+
+.dashboard-link {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: #4CAF50;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.dashboard-link a {
+    color: white;
+    text-decoration: none;
+}
